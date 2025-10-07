@@ -6,8 +6,12 @@
 question = input("Is today a good day? Please answer with y or n: ").lower()
 
 #Analyze the value and print of yes it is
-if question =='y':
-    print("yes it is")
+if question == 'y':
+    #Create a loop of 10 times saying yea it is"
+     number = 1
+while number < 11:
+    print("Yes it is")
+    number += 1
 elif question == 'n':
     print("Thats okay tomorrow will be n")
 elif question == 'idk':
