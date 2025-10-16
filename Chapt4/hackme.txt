@@ -1,0 +1,22 @@
+
+
+
+#what is your name
+name = input("what is your name? ")
+print("Hello, Jeff ")
+
+#what is your favorite color
+red = input("what is your favorite color")
+print(f"your favorite color is {red}")
+
+#first pet name
+Rocket = input("what was your first pet's name?")
+print(f"your first pet name is {Rocket}")
+
+#Mother's maiden name
+Hill = input("what is your mother's maiden name?")
+print(f"your mother maiden name is {Hill}")
+
+# elementary school they attened
+elementary_school = input("what elementary school did you attend")
+print(f"school attened {elementary_school}")
