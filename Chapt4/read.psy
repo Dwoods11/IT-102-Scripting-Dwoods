@@ -1,0 +1,9 @@
+
+
+'''
+We want to create a little script that opens a file and reads (Default mode of open)
+'''
+
+with open("hackme.txt", "r") as file:
+    content = file.read()
+    print(content)
