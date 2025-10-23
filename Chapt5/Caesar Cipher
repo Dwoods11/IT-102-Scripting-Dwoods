@@ -1,0 +1,26 @@
+import string
+
+message = "Hello, World!"
+Shift = 3
+encrypted_message = "Hello, World!"
+
+alphabet = string.ascii_lowercase
+shifted = alphabet[3:] + alphabet[:3]
+
+encrypt_table = str.maketrans(alphabet + alphabet.upper(), shifted + shifted.upper())
+decrypt_table = str.maketrans(alphabet + alphabet.upper(), shifted + shifted.upper())
+
+encrypted_message = message.translate(encrypt_table)
+print("Encrypted message:",encrypted_message)
+
+choice = input("Decrypt the message? (yes/no):").lower()
+if choice =="yes":
+    decrypted_message = encrypted_message.translate(decrypt_table)
+    print("Decrypted the message:", decrypted_message)
+
+
+
+
+
+
+
