@@ -4,6 +4,6 @@
 We want to create a little script that opens a file and reads (Default mode of open)
 '''
 
-with open("hackme.txt", "r") as file:
+with open("/home/justincase/Desktop/IT-102-Scripting-Dwoods/IT-102-Scripting-Dwoods/Chapt4/hackme.txt", "r") as file:
     content = file.read()
     print(content)

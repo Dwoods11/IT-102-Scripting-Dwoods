@@ -1,11 +1,11 @@
 import string
 
 message = "Hello, World!"
-Shift = 3
-encrypted_message = "Hello, World!"
+#Shift = 3
+
 
 alphabet = string.ascii_lowercase
-shifted = alphabet[3:] + alphabet[:3]
+shifted = alphabet[:3] + alphabet[3:]
 
 encrypt_table = str.maketrans(alphabet + alphabet.upper(), shifted + shifted.upper())
 decrypt_table = str.maketrans(alphabet + alphabet.upper(), shifted + shifted.upper())
