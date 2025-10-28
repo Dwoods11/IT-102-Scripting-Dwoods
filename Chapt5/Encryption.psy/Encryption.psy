@@ -1,0 +1,29 @@
+#Encoding - yes - data useable across systems - transforming data to a trasnportable form -
+#Encyption - yes (but its a need a key) - AES, RSA
+#Hashing - ensure intergrity data and verifaction, NOT reversible (MD%, SHA256) - Unique finger print
+
+
+from cryptography.hazmat.primitives.ciphers import cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import padding
+import os
+
+
+# dealing with encryption which is The KEY
+key = os.urandom(32) #This is a 256-bit AES key
+iv = os.urandom(16) #This is a 128-bit IV
+
+
+#Encrypt the message (HOW DO WE DO THIS)
+plaintext = b'Confidential messsage from Woods'
+# At a minimum it requires 16 bytes
+padder = padding.PKCS7(128).padder()
+padded_data = padder.update(plaintext) + padder.finalize()
+
+cipher = cipher(algorithms.AES(key),modes.CBC(iv), backend=default_backend)
+encryptor = cipher.encryptor()
+ciphertext = encryptor.update(padded_data) + encryptor.finalize()
+
+
+#output
+print("ciphertext:", ciphertext.hex())
