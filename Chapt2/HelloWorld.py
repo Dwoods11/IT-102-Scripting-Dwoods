@@ -1,3 +1,5 @@
+# By Devante Woods
+
 #Prompts the user for their name
 name = input ("Please enter your name:")
 
